@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./logic/mapping-initial.js"></script>
+    <script defer src="./logic/click-handling.js"></script>
+    <script defer src="./logic/pawn-rule.js"></script>
+    <script defer src="./pieces/pawn-piece.js"></script>
+    <script defer src="./oop/Bishop.js"></script>
+    <script defer src="./oop/Board.js"></script>
+    <script defer src="./oop/Game.js"></script>
+    <script defer src="./oop/King.js"></script>
+    <script defer src="./oop/mapping-oop.js"></script>
+    <script defer src="./oop/mapping-oop.js"></script>
+    <script defer src="./oop/mapping-oop.js"></script>
+    <script defer src="./oop/mapping-oop.js"></script>
+    <script defer src="./oop/mapping-oop.js"></script>
+    <script defer src="./oop/mapping-oop.js"></script>
+
+</head>
+<body>
+    <div class="dad-container">
+        <div class="main-container">
+            <div class="file-a files">
+                <div class="square">
+                    <img src="./resources/Images/black/rook.png" alt="brook">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/rook.png" alt="wrook">
+                </div>
+            </div>
+            <div class="file-b files">
+                <div class="square">
+                    <img src="./resources/Images/black/bishop.png" alt="">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/bishop.png" alt="">
+                </div>
+            </div>
+            <div class="file-c files">
+                <div class="square">
+                    <img src="./resources/Images/black/knight.png" alt="">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/knight.png" alt="">
+                </div>
+            </div>
+            <div class="file-d files">
+                <div class="square">
+                    <img src="./resources/Images/black/queen.png" alt="">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/queen.png" alt="">
+                </div>
+            </div>
+            <div class="file-e files">
+                <div class="square">
+                    <img src="./resources/Images/black/king.png" alt="">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/king.png" alt="">
+                </div>
+            </div>
+            <div class="file-f files">
+                <div class="square">
+                    <img src="./resources/Images/black/knight.png" alt="">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/knight.png" alt="">
+                </div>
+            </div>
+            <div class="file-g files">
+                <div class="square">
+                    <img src="./resources/Images/black/bishop.png" alt="">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/bishop.png" alt="">
+                </div>
+            </div>
+            <div class="file-h files">
+                <div class="square">
+                    <img src="./resources/Images/black/rook.png" alt="brook">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/black/pawn.png" alt="bpawn">
+                </div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square">
+                    <img src="./resources/Images/white/pawn.png" alt="wpawn">
+                </div>
+                <div class="square">
+                    <img src="./resources/Images/white/rook.png" alt="wrook">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
